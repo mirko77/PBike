@@ -1,6 +1,6 @@
 using Toybox.Application;
 
-class GRunApp extends Application.AppBase
+class PHikeApp extends Application.AppBase
 {
   function initialize()
   {
@@ -18,6 +18,6 @@ class GRunApp extends Application.AppBase
 
   function getInitialView()
   {
-    return [ new GRunView() ];
+    return [ new PHikeView() ];
   }
 }

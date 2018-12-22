@@ -1,7 +1,7 @@
-# GRun
+# PHike
 Configurable Garmin Watch datafield
 
-![GRun Cover Image](/doc/GRunWatch.png) 
+![PHike Cover Image](/doc/GRunWatch.png) 
 
 ## Release Notes
 ### Version 1.15
@@ -21,7 +21,7 @@ Configurable Garmin Watch datafield
  - Bug Fix: Area "Battery Icon" now display the battery icon instead of the GPS icon
  - Code Optimization to minimize memory usage
  
- ![GRun Version 1.10](/doc/GRunWatch8.png)
+ ![PHike Version 1.10](/doc/GRunWatch8.png)
 
 ## Description
 Highly configurable datafield where you can select up to 10 fields to display. If less fields are configured, the field area on each line will automatically expand.
@@ -68,35 +68,35 @@ The following fields are currently supported:
 ### Header Position
 Header Position can have 3 positions.
 #### 1) Top / Top
-![GRun TopTop](/doc/GRunWatch2.png)
+![PHike TopTop](/doc/GRunWatch2.png)
 
 #### 2) Top / Bottom
-![GRun TopBottom](/doc/GRunWatch3.png)
+![PHike TopBottom](/doc/GRunWatch3.png)
 #### 3) Bottom / Top
-![GRun BottomTop](/doc/GRunWatch4.png)
+![PHike BottomTop](/doc/GRunWatch4.png)
 
 ### Minimum/Maximum Pace
 Current Pace and Average Pace are displayed in color based on application parameters
   - Blue if too fast, Green if between Min and Max Pace, Red if too slow
 
-![GRun PaceColor](/doc/GRunWatch5.png)
+![PHike PaceColor](/doc/GRunWatch5.png)
 
 ### Middle Column Percentage Size
 You can reduce or increase the width of the middle column. Simply configure the value as a percentage of the original value. I personally set it to 75% in order to have left and right column larger. I can then set value in format MM:SS on left and right column and keep decimal value in the middle column.
 
 If you prefer, you could also set it to 100 in order to have all the columns of the same size.
-![GRun MiddleColumn100](/doc/GRunWatch6.png)
+![PHike MiddleColumn100](/doc/GRunWatch6.png)
 
 Or you could also set it to a value higher than 100 (Example 125) to have the middle column 125% larger.
-![GRun MiddleColumn125](/doc/GRunWatch7.png)
+![PHike MiddleColumn125](/doc/GRunWatch7.png)
 
 ### Fields
 Up to 10 fields can be displayed using application parameters.
 
-![GRun GarminConnectParams](/doc/GarminConnectParams.png)
-![GRun Fields](/doc/GRunWatchFields.png)
+![PHike GarminConnectParams](/doc/GarminConnectParams.png)
+![PHike Fields](/doc/GRunWatchFields.png)
 
 #### Less fields
 If some fields are configured with option  **Empty**, the other fields on the same line will automatically expand. For example, the following screen is configured with **Field 2B = Empty**.
 
-![GRun Expand](/doc/GRunWatch1.png)
+![PHike Expand](/doc/GRunWatch1.png)

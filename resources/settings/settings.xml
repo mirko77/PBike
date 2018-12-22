@@ -2,58 +2,9 @@
   <setting propertyKey="@Properties.AppVersion" title="@Strings.PARAM_APP_VERSION">
     <settingConfig type="alphaNumeric" readonly="true" />
   </setting>
-    
-  <setting propertyKey="@Properties.HeaderPosition" title="@Strings.PARAM_HEADER_POSITION">
-    <settingConfig type="list">
-      <listEntry value="1">@Strings.PARAM_HEADER_POSITION_1</listEntry>
-      <listEntry value="2">@Strings.PARAM_HEADER_POSITION_2</listEntry>
-      <listEntry value="3">@Strings.PARAM_HEADER_POSITION_3</listEntry>
-    </settingConfig>
-  </setting>
-  
-  <setting propertyKey="@Properties.MinPace" title="@Strings.PARAM_MIN_PACE">
-    <settingConfig type="numeric" min="0" />
-  </setting>
-    
-  <setting propertyKey="@Properties.MaxPace" title="@Strings.PARAM_MAX_PACE">
-    <settingConfig type="numeric" min="0" />
-  </setting>
   
   <setting propertyKey="@Properties.MiddleColumnPercentageSize" title="@Strings.PARAM_MIDDLE_COLUMN_PERCENTAGE_SIZE">
     <settingConfig type="numeric" min="0" />
-  </setting>
-  
-  <setting propertyKey="@Properties.Area1" title="@Strings.PARAM_AREA1">
-    <settingConfig type="list">
-      <listEntry value="0">@Strings.Field00</listEntry>
-      <listEntry value="1">@Strings.Field01</listEntry>
-      <listEntry value="2">@Strings.Field02</listEntry>
-      <listEntry value="3">@Strings.Field03</listEntry>
-      <listEntry value="4">@Strings.Field04</listEntry>
-      <listEntry value="5">@Strings.Field05</listEntry>
-      <listEntry value="6">@Strings.Field06</listEntry>
-      <listEntry value="7">@Strings.Field07</listEntry>
-      <listEntry value="8">@Strings.Field08</listEntry>
-      <listEntry value="9">@Strings.Field09</listEntry>
-      <listEntry value="10">@Strings.Field10</listEntry>
-      <listEntry value="11">@Strings.Field11</listEntry>
-      <listEntry value="12">@Strings.Field12</listEntry>
-      <listEntry value="13">@Strings.Field13</listEntry>
-      <listEntry value="14">@Strings.Field14</listEntry>
-      <listEntry value="15">@Strings.Field15</listEntry>
-      <listEntry value="16">@Strings.Field16</listEntry>
-      <listEntry value="17">@Strings.Field17</listEntry>
-      <listEntry value="18">@Strings.Field18</listEntry>
-      <listEntry value="19">@Strings.Field19</listEntry>
-      <listEntry value="20">@Strings.Field20</listEntry>
-      <listEntry value="21">@Strings.Field21</listEntry>
-      <listEntry value="22">@Strings.Field22</listEntry>
-      <listEntry value="23">@Strings.Field23</listEntry>
-      <listEntry value="24">@Strings.Field24</listEntry>
-      <listEntry value="25">@Strings.Field25</listEntry>
-      <listEntry value="26">@Strings.Field26</listEntry>
-      <listEntry value="27">@Strings.Field27</listEntry>
-    </settingConfig>
   </setting>
   
   <setting propertyKey="@Properties.Area2" title="@Strings.PARAM_AREA2">
@@ -61,31 +12,18 @@
       <listEntry value="0">@Strings.Field00</listEntry>
       <listEntry value="1">@Strings.Field01</listEntry>
       <listEntry value="2">@Strings.Field02</listEntry>
-      <listEntry value="3">@Strings.Field03</listEntry>
-      <listEntry value="4">@Strings.Field04</listEntry>
-      <listEntry value="5">@Strings.Field05</listEntry>
+       <listEntry value="5">@Strings.Field05</listEntry>
       <listEntry value="6">@Strings.Field06</listEntry>
       <listEntry value="7">@Strings.Field07</listEntry>
       <listEntry value="8">@Strings.Field08</listEntry>
-      <listEntry value="9">@Strings.Field09</listEntry>
-      <listEntry value="10">@Strings.Field10</listEntry>
-      <listEntry value="11">@Strings.Field11</listEntry>
       <listEntry value="12">@Strings.Field12</listEntry>
       <listEntry value="13">@Strings.Field13</listEntry>
       <listEntry value="14">@Strings.Field14</listEntry>
       <listEntry value="15">@Strings.Field15</listEntry>
       <listEntry value="16">@Strings.Field16</listEntry>
       <listEntry value="17">@Strings.Field17</listEntry>
-      <listEntry value="18">@Strings.Field18</listEntry>
-      <listEntry value="19">@Strings.Field19</listEntry>
       <listEntry value="20">@Strings.Field20</listEntry>
-      <listEntry value="21">@Strings.Field21</listEntry>
-      <listEntry value="22">@Strings.Field22</listEntry>
-      <listEntry value="23">@Strings.Field23</listEntry>
-      <listEntry value="24">@Strings.Field24</listEntry>
-      <listEntry value="25">@Strings.Field25</listEntry>
-      <listEntry value="26">@Strings.Field26</listEntry>
-      <listEntry value="27">@Strings.Field27</listEntry>
+      <listEntry value="28">@Strings.Field28</listEntry>
     </settingConfig>
   </setting>
   
@@ -94,31 +32,18 @@
       <listEntry value="0">@Strings.Field00</listEntry>
       <listEntry value="1">@Strings.Field01</listEntry>
       <listEntry value="2">@Strings.Field02</listEntry>
-      <listEntry value="3">@Strings.Field03</listEntry>
-      <listEntry value="4">@Strings.Field04</listEntry>
-      <listEntry value="5">@Strings.Field05</listEntry>
+       <listEntry value="5">@Strings.Field05</listEntry>
       <listEntry value="6">@Strings.Field06</listEntry>
       <listEntry value="7">@Strings.Field07</listEntry>
       <listEntry value="8">@Strings.Field08</listEntry>
-      <listEntry value="9">@Strings.Field09</listEntry>
-      <listEntry value="10">@Strings.Field10</listEntry>
-      <listEntry value="11">@Strings.Field11</listEntry>
       <listEntry value="12">@Strings.Field12</listEntry>
       <listEntry value="13">@Strings.Field13</listEntry>
       <listEntry value="14">@Strings.Field14</listEntry>
       <listEntry value="15">@Strings.Field15</listEntry>
       <listEntry value="16">@Strings.Field16</listEntry>
       <listEntry value="17">@Strings.Field17</listEntry>
-      <listEntry value="18">@Strings.Field18</listEntry>
-      <listEntry value="19">@Strings.Field19</listEntry>
       <listEntry value="20">@Strings.Field20</listEntry>
-      <listEntry value="21">@Strings.Field21</listEntry>
-      <listEntry value="22">@Strings.Field22</listEntry>
-      <listEntry value="23">@Strings.Field23</listEntry>
-      <listEntry value="24">@Strings.Field24</listEntry>
-      <listEntry value="25">@Strings.Field25</listEntry>
-      <listEntry value="26">@Strings.Field26</listEntry>
-      <listEntry value="27">@Strings.Field27</listEntry>
+       <listEntry value="28">@Strings.Field28</listEntry>
     </settingConfig>
   </setting>
   
@@ -127,31 +52,19 @@
       <listEntry value="0">@Strings.Field00</listEntry>
       <listEntry value="1">@Strings.Field01</listEntry>
       <listEntry value="2">@Strings.Field02</listEntry>
-      <listEntry value="3">@Strings.Field03</listEntry>
-      <listEntry value="4">@Strings.Field04</listEntry>
-      <listEntry value="5">@Strings.Field05</listEntry>
+       <listEntry value="5">@Strings.Field05</listEntry>
       <listEntry value="6">@Strings.Field06</listEntry>
+      
       <listEntry value="7">@Strings.Field07</listEntry>
       <listEntry value="8">@Strings.Field08</listEntry>
-      <listEntry value="9">@Strings.Field09</listEntry>
-      <listEntry value="10">@Strings.Field10</listEntry>
-      <listEntry value="11">@Strings.Field11</listEntry>
       <listEntry value="12">@Strings.Field12</listEntry>
       <listEntry value="13">@Strings.Field13</listEntry>
       <listEntry value="14">@Strings.Field14</listEntry>
       <listEntry value="15">@Strings.Field15</listEntry>
       <listEntry value="16">@Strings.Field16</listEntry>
       <listEntry value="17">@Strings.Field17</listEntry>
-      <listEntry value="18">@Strings.Field18</listEntry>
-      <listEntry value="19">@Strings.Field19</listEntry>
       <listEntry value="20">@Strings.Field20</listEntry>
-      <listEntry value="21">@Strings.Field21</listEntry>
-      <listEntry value="22">@Strings.Field22</listEntry>
-      <listEntry value="23">@Strings.Field23</listEntry>
-      <listEntry value="24">@Strings.Field24</listEntry>
-      <listEntry value="25">@Strings.Field25</listEntry>
-      <listEntry value="26">@Strings.Field26</listEntry>
-      <listEntry value="27">@Strings.Field27</listEntry>
+       <listEntry value="28">@Strings.Field28</listEntry>
     </settingConfig>
   </setting>
   
@@ -160,64 +73,37 @@
       <listEntry value="0">@Strings.Field00</listEntry>
       <listEntry value="1">@Strings.Field01</listEntry>
       <listEntry value="2">@Strings.Field02</listEntry>
-      <listEntry value="3">@Strings.Field03</listEntry>
-      <listEntry value="4">@Strings.Field04</listEntry>
-      <listEntry value="5">@Strings.Field05</listEntry>
+       <listEntry value="5">@Strings.Field05</listEntry>
       <listEntry value="6">@Strings.Field06</listEntry>
       <listEntry value="7">@Strings.Field07</listEntry>
       <listEntry value="8">@Strings.Field08</listEntry>
-      <listEntry value="9">@Strings.Field09</listEntry>
-      <listEntry value="10">@Strings.Field10</listEntry>
-      <listEntry value="11">@Strings.Field11</listEntry>
       <listEntry value="12">@Strings.Field12</listEntry>
       <listEntry value="13">@Strings.Field13</listEntry>
       <listEntry value="14">@Strings.Field14</listEntry>
       <listEntry value="15">@Strings.Field15</listEntry>
       <listEntry value="16">@Strings.Field16</listEntry>
       <listEntry value="17">@Strings.Field17</listEntry>
-      <listEntry value="18">@Strings.Field18</listEntry>
-      <listEntry value="19">@Strings.Field19</listEntry>
       <listEntry value="20">@Strings.Field20</listEntry>
-      <listEntry value="21">@Strings.Field21</listEntry>
-      <listEntry value="22">@Strings.Field22</listEntry>
-      <listEntry value="23">@Strings.Field23</listEntry>
-      <listEntry value="24">@Strings.Field24</listEntry>
-      <listEntry value="25">@Strings.Field25</listEntry>
-      <listEntry value="26">@Strings.Field26</listEntry>
-      <listEntry value="27">@Strings.Field27</listEntry>
+       <listEntry value="28">@Strings.Field28</listEntry>
     </settingConfig>
   </setting>
-  
   <setting propertyKey="@Properties.Area6" title="@Strings.PARAM_AREA6">
     <settingConfig type="list">
       <listEntry value="0">@Strings.Field00</listEntry>
       <listEntry value="1">@Strings.Field01</listEntry>
       <listEntry value="2">@Strings.Field02</listEntry>
-      <listEntry value="3">@Strings.Field03</listEntry>
-      <listEntry value="4">@Strings.Field04</listEntry>
-      <listEntry value="5">@Strings.Field05</listEntry>
+       <listEntry value="5">@Strings.Field05</listEntry>
       <listEntry value="6">@Strings.Field06</listEntry>
       <listEntry value="7">@Strings.Field07</listEntry>
       <listEntry value="8">@Strings.Field08</listEntry>
-      <listEntry value="9">@Strings.Field09</listEntry>
-      <listEntry value="10">@Strings.Field10</listEntry>
-      <listEntry value="11">@Strings.Field11</listEntry>
       <listEntry value="12">@Strings.Field12</listEntry>
       <listEntry value="13">@Strings.Field13</listEntry>
       <listEntry value="14">@Strings.Field14</listEntry>
       <listEntry value="15">@Strings.Field15</listEntry>
       <listEntry value="16">@Strings.Field16</listEntry>
       <listEntry value="17">@Strings.Field17</listEntry>
-      <listEntry value="18">@Strings.Field18</listEntry>
-      <listEntry value="19">@Strings.Field19</listEntry>
       <listEntry value="20">@Strings.Field20</listEntry>
-      <listEntry value="21">@Strings.Field21</listEntry>
-      <listEntry value="22">@Strings.Field22</listEntry>
-      <listEntry value="23">@Strings.Field23</listEntry>
-      <listEntry value="24">@Strings.Field24</listEntry>
-      <listEntry value="25">@Strings.Field25</listEntry>
-      <listEntry value="26">@Strings.Field26</listEntry>
-      <listEntry value="27">@Strings.Field27</listEntry>
+       <listEntry value="28">@Strings.Field28</listEntry>
     </settingConfig>
   </setting>
   
@@ -226,131 +112,23 @@
       <listEntry value="0">@Strings.Field00</listEntry>
       <listEntry value="1">@Strings.Field01</listEntry>
       <listEntry value="2">@Strings.Field02</listEntry>
-      <listEntry value="3">@Strings.Field03</listEntry>
-      <listEntry value="4">@Strings.Field04</listEntry>
-      <listEntry value="5">@Strings.Field05</listEntry>
+       <listEntry value="5">@Strings.Field05</listEntry>
       <listEntry value="6">@Strings.Field06</listEntry>
       <listEntry value="7">@Strings.Field07</listEntry>
       <listEntry value="8">@Strings.Field08</listEntry>
-      <listEntry value="9">@Strings.Field09</listEntry>
-      <listEntry value="10">@Strings.Field10</listEntry>
-      <listEntry value="11">@Strings.Field11</listEntry>
       <listEntry value="12">@Strings.Field12</listEntry>
       <listEntry value="13">@Strings.Field13</listEntry>
       <listEntry value="14">@Strings.Field14</listEntry>
       <listEntry value="15">@Strings.Field15</listEntry>
       <listEntry value="16">@Strings.Field16</listEntry>
       <listEntry value="17">@Strings.Field17</listEntry>
-      <listEntry value="18">@Strings.Field18</listEntry>
-      <listEntry value="19">@Strings.Field19</listEntry>
       <listEntry value="20">@Strings.Field20</listEntry>
-      <listEntry value="21">@Strings.Field21</listEntry>
-      <listEntry value="22">@Strings.Field22</listEntry>
-      <listEntry value="23">@Strings.Field23</listEntry>
-      <listEntry value="24">@Strings.Field24</listEntry>
-      <listEntry value="25">@Strings.Field25</listEntry>
-      <listEntry value="26">@Strings.Field26</listEntry>
-      <listEntry value="27">@Strings.Field27</listEntry>
+       <listEntry value="28">@Strings.Field28</listEntry>
     </settingConfig>
   </setting>
   
-  <setting propertyKey="@Properties.Area8" title="@Strings.PARAM_AREA8">
-    <settingConfig type="list">
-      <listEntry value="0">@Strings.Field00</listEntry>
-      <listEntry value="1">@Strings.Field01</listEntry>
-      <listEntry value="2">@Strings.Field02</listEntry>
-      <listEntry value="3">@Strings.Field03</listEntry>
-      <listEntry value="4">@Strings.Field04</listEntry>
-      <listEntry value="5">@Strings.Field05</listEntry>
-      <listEntry value="6">@Strings.Field06</listEntry>
-      <listEntry value="7">@Strings.Field07</listEntry>
-      <listEntry value="8">@Strings.Field08</listEntry>
-      <listEntry value="9">@Strings.Field09</listEntry>
-      <listEntry value="10">@Strings.Field10</listEntry>
-      <listEntry value="11">@Strings.Field11</listEntry>
-      <listEntry value="12">@Strings.Field12</listEntry>
-      <listEntry value="13">@Strings.Field13</listEntry>
-      <listEntry value="14">@Strings.Field14</listEntry>
-      <listEntry value="15">@Strings.Field15</listEntry>
-      <listEntry value="16">@Strings.Field16</listEntry>
-      <listEntry value="17">@Strings.Field17</listEntry>
-      <listEntry value="18">@Strings.Field18</listEntry>
-      <listEntry value="19">@Strings.Field19</listEntry>
-      <listEntry value="20">@Strings.Field20</listEntry>
-      <listEntry value="21">@Strings.Field21</listEntry>
-      <listEntry value="22">@Strings.Field22</listEntry>
-      <listEntry value="23">@Strings.Field23</listEntry>
-      <listEntry value="24">@Strings.Field24</listEntry>
-      <listEntry value="25">@Strings.Field25</listEntry>
-      <listEntry value="26">@Strings.Field26</listEntry>
-      <listEntry value="27">@Strings.Field27</listEntry>
-    </settingConfig>
-  </setting>
   
-  <setting propertyKey="@Properties.Area9" title="@Strings.PARAM_AREA9">
-    <settingConfig type="list">
-      <listEntry value="0">@Strings.Field00</listEntry>
-      <listEntry value="1">@Strings.Field01</listEntry>
-      <listEntry value="2">@Strings.Field02</listEntry>
-      <listEntry value="3">@Strings.Field03</listEntry>
-      <listEntry value="4">@Strings.Field04</listEntry>
-      <listEntry value="5">@Strings.Field05</listEntry>
-      <listEntry value="6">@Strings.Field06</listEntry>
-      <listEntry value="7">@Strings.Field07</listEntry>
-      <listEntry value="8">@Strings.Field08</listEntry>
-      <listEntry value="9">@Strings.Field09</listEntry>
-      <listEntry value="10">@Strings.Field10</listEntry>
-      <listEntry value="11">@Strings.Field11</listEntry>
-      <listEntry value="12">@Strings.Field12</listEntry>
-      <listEntry value="13">@Strings.Field13</listEntry>
-      <listEntry value="14">@Strings.Field14</listEntry>
-      <listEntry value="15">@Strings.Field15</listEntry>
-      <listEntry value="16">@Strings.Field16</listEntry>
-      <listEntry value="17">@Strings.Field17</listEntry>
-      <listEntry value="18">@Strings.Field18</listEntry>
-      <listEntry value="19">@Strings.Field19</listEntry>
-      <listEntry value="20">@Strings.Field20</listEntry>
-      <listEntry value="21">@Strings.Field21</listEntry>
-      <listEntry value="22">@Strings.Field22</listEntry>
-      <listEntry value="23">@Strings.Field23</listEntry>
-      <listEntry value="24">@Strings.Field24</listEntry>
-      <listEntry value="25">@Strings.Field25</listEntry>
-      <listEntry value="26">@Strings.Field26</listEntry>
-      <listEntry value="27">@Strings.Field27</listEntry>
-    </settingConfig>
-  </setting>
   
-  <setting propertyKey="@Properties.Area10" title="@Strings.PARAM_AREA10">
-    <settingConfig type="list">
-      <listEntry value="0">@Strings.Field00</listEntry>
-      <listEntry value="1">@Strings.Field01</listEntry>
-      <listEntry value="2">@Strings.Field02</listEntry>
-      <listEntry value="3">@Strings.Field03</listEntry>
-      <listEntry value="4">@Strings.Field04</listEntry>
-      <listEntry value="5">@Strings.Field05</listEntry>
-      <listEntry value="6">@Strings.Field06</listEntry>
-      <listEntry value="7">@Strings.Field07</listEntry>
-      <listEntry value="8">@Strings.Field08</listEntry>
-      <listEntry value="9">@Strings.Field09</listEntry>
-      <listEntry value="10">@Strings.Field10</listEntry>
-      <listEntry value="11">@Strings.Field11</listEntry>
-      <listEntry value="12">@Strings.Field12</listEntry>
-      <listEntry value="13">@Strings.Field13</listEntry>
-      <listEntry value="14">@Strings.Field14</listEntry>
-      <listEntry value="15">@Strings.Field15</listEntry>
-      <listEntry value="16">@Strings.Field16</listEntry>
-      <listEntry value="17">@Strings.Field17</listEntry>
-      <listEntry value="18">@Strings.Field18</listEntry>
-      <listEntry value="19">@Strings.Field19</listEntry>
-      <listEntry value="20">@Strings.Field20</listEntry>
-      <listEntry value="21">@Strings.Field21</listEntry>
-      <listEntry value="22">@Strings.Field22</listEntry>
-      <listEntry value="23">@Strings.Field23</listEntry>
-      <listEntry value="24">@Strings.Field24</listEntry>
-      <listEntry value="25">@Strings.Field25</listEntry>
-      <listEntry value="26">@Strings.Field26</listEntry>
-      <listEntry value="27">@Strings.Field27</listEntry>
-    </settingConfig>
-  </setting>
+   
   
 </settings>

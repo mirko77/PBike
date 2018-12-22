@@ -4,6 +4,7 @@ using Toybox.System;
 using Toybox.Time;
 using Toybox.Time.Gregorian;
 using Toybox.UserProfile;
+using Toybox.Sensor;
 
 const CONVERSION_KM_TO_MILE = 0.62137119;
 const CONVERSION_MILE_TO_KM = 1.609344;
@@ -12,7 +13,7 @@ const LENGTH_GPS_ICON = 28;
 const LENGTH_BATTERY_ICON = 50;
 
 
-class GRunView extends WatchUi.DataField
+class PHikeView extends WatchUi.DataField
 {
   // Array of the current heart rate zone threshold values in beats per minute (bpm)
   private var hrZones;
@@ -117,7 +118,8 @@ class GRunView extends WatchUi.DataField
     OPTION_ETA_MARATHON = 24,
     OPTION_CURRENT_LAP_TIME = 25,
     OPTION_CURRENT_LAP_DISTANCE = 26,
-    OPTION_CURRENT_LAP_PACE = 27
+    OPTION_CURRENT_LAP_PACE = 27,
+    OPTION_CURRENT_TEMPERATURE = 28
     /*
     OPTION_AMBIENT_PRESSURE = 25,
     OPTION_AVERAGE_CADENCE = 26,
@@ -386,19 +388,9 @@ class GRunView extends WatchUi.DataField
     isDistanceUnitsImperial = (deviceSettings.distanceUnits == System.UNIT_STATUTE);
     isElevationUnitsImperial = (deviceSettings.elevationUnits == System.UNIT_STATUTE);
   
-    headerPosition = getParameter("HeaderPosition", 1);
-    middleColumnPercentageSize = getParameter("MiddleColumnPercentageSize", 75);
+    headerPosition = 1;
+    middleColumnPercentageSize = getParameter("MiddleColumnPercentageSize", 100);
     
-    if (isPaceUnitsImperial == true) {
-      minPace = getParameter("MinPace", 510);
-      maxPace = getParameter("MaxPace", 555);
-    }
-    
-    else {
-      minPace = getParameter("MinPace", 315);
-      maxPace = getParameter("MaxPace", 345);
-    }
-        
     // Select which values are displayed in each area
     // Value must be selected according to the enum
     // The following options are currently supported:
@@ -430,15 +422,15 @@ class GRunView extends WatchUi.DataField
     //  - OPTION_CURRENT_LAP_TIME = 25
     //  - OPTION_CURRENT_LAP_DISTANCE = 26
     //  - OPTION_CURRENT_LAP_PACE = 27
-    v1 = getParameter("Area1", OPTION_CURRENT_HEART_RATE);
-    v2 = getParameter("Area2", OPTION_TIMER_TIME_ON_PREVIOUS_KM_OR_MILE);
-    v3 = getParameter("Area3", OPTION_CURRENT_CADENCE);
-    v4 = getParameter("Area4", OPTION_CURRENT_PACE);
-    v5 = getParameter("Area5", OPTION_ELAPSED_DISTANCE);
+    v1 = OPTION_CURRENT_TIME;
+    v2 = getParameter("Area2", OPTION_TIMER_TIME);
+    v3 = getParameter("Area3", OPTION_EMPTY);
+    v4 = getParameter("Area4", OPTION_ELAPSED_DISTANCE);
+    v5 = getParameter("Area5", OPTION_TOTAL_ASCENT);
     v6 = getParameter("Area6", OPTION_ALTITUDE);
-    v7 = getParameter("Area7", OPTION_AVERAGE_PACE);
-    v8 = getParameter("Area8", OPTION_TIMER_TIME);
-    v9 = getParameter("Area9", OPTION_CURRENT_TIME);
+    v7 = getParameter("Area7", OPTION_TOTAL_DESCENT);
+    v8 = OPTION_EMPTY;
+    v9 = OPTION_EMPTY;
     v10 = getParameter("Area10", OPTION_CURRENT_LOCATION_ACCURACY_AND_BATTERY);
     
     hrZones = UserProfile.getHeartRateZones(UserProfile.HR_ZONE_SPORT_RUNNING);
@@ -922,6 +914,12 @@ class GRunView extends WatchUi.DataField
     {
       return convertUnitIfRequired(info.totalDescent, CONVERSION_METER_TO_FEET, isElevationUnitsImperial).toNumber();
     }
+    
+//    // Current temperatire in Celsius
+//    if ( (value == OPTION_CURRENT_TEMPERATURE) )
+//    {
+//      return info.temperature;
+//    }
 
     //return computeExtraValue(info, id, value, valueData);
     return valueData;
@@ -1212,15 +1210,20 @@ class GRunView extends WatchUi.DataField
   // guarantee that compute() will be called before onUpdate().
   function compute(info)
   {
-    v1data = computeValue(info, 1, v1, v1data);
+    v1data = computeValue(info, 1, v1, v1data); //top row, time
+    //first row
     v2data = computeValue(info, 2, v2, v2data);
     v3data = computeValue(info, 3, v3, v3data);
     v4data = computeValue(info, 4, v4, v4data);
+    //second row
     v5data = computeValue(info, 5, v5, v5data);
     v6data = computeValue(info, 6, v6, v6data);
     v7data = computeValue(info, 7, v7, v7data);
+    
+    //third row, to be empty
     v8data = computeValue(info, 8, v8, v8data);
     v9data = computeValue(info, 9, v9, v9data);
+    //last row
     v10data = computeValue(info, 10, v10, v10data);
   }
   
@@ -1543,12 +1546,12 @@ class GRunView extends WatchUi.DataField
 
       case OPTION_CURRENT_LAP_PACE:
         return "LAP PACE";
-
+							
       case OPTION_TOTAL_ASCENT:
-        return "ASCENT";
+        return "CLIMB+";
 
       case OPTION_TOTAL_DESCENT:
-        return "DESCENT";
+        return "CLIMB-";
 
       //case OPTION_TRACK:
       //  return "TRACK";
@@ -1575,8 +1578,21 @@ class GRunView extends WatchUi.DataField
   
   function getHour(h)
   {
+  	
+  	var currentHour;
+  	
     if (System.getDeviceSettings().is24Hour) { return h; }
-    if (h > 12) { return h - 12; }
+    
+    if (h > 12) { 
+    
+    currentHour = h - 12;
+    
+    currentHour  = currentHour < 10 ? "0" + currentHour : currentHour; 
+    
+    return currentHour; 
+    
+    }
+    
     return h;
   }
   
@@ -1607,7 +1623,7 @@ class GRunView extends WatchUi.DataField
         return formatDuration(value, true);
       
       case OPTION_CURRENT_TIME:
-        if ( (type == v1) || (type == v8) || (type == v9) || (type == v10) ) { return getHour(value.hour) + "h" + value.min.format("%02d"); }
+        if ( (type == v1) || (type == v8) || (type == v9) || (type == v10) ) { return getHour(value.hour) + ":" + value.min.format("%02d"); }
         return getHour(value.hour) + ":" + value.min.format("%02d");
     }
 
@@ -1670,7 +1686,7 @@ class GRunView extends WatchUi.DataField
     
     if (id == null) { return backgroundColor1; }
     
-    if ( (id >= 8) && (id <= 10) ) {
+    if ( (id >= 2) && (id <= 9) ) {
         return backgroundColor2;
     }
     
@@ -1696,7 +1712,7 @@ class GRunView extends WatchUi.DataField
       case OPTION_AVERAGE_HEART_RATE:
         if (value instanceof Toybox.Lang.Number == false)
         {
-          if ((id >= 8) && (id <= 10)) { return foregroundColor2; }
+          if ((id >= 2) && (id <= 9)) { return foregroundColor2; }
           return foregroundColor1;
         }
         
@@ -1710,13 +1726,13 @@ class GRunView extends WatchUi.DataField
       case OPTION_AVERAGE_PACE:
       case OPTION_AVERAGE_PACE_MANUAL_CALC:
       case OPTION_CURRENT_LAP_PACE:
-        if (value <= 0) { return ((id >= 8) && (id <= 10)) ? foregroundColor2 : foregroundColor1; }
+        if (value <= 0) { return ((id >= 2) && (id <= 9)) ? foregroundColor2 : foregroundColor1; }
         else if (value < minPace) { return Graphics.COLOR_BLUE; }
         else if (value > maxPace) { return Graphics.COLOR_RED; }
         return Graphics.COLOR_DK_GREEN;
     }
     
-    if ( ((id >= 8) && (id <= 10)) ) { return foregroundColor2; }
+    if ( ((id >= 2) && (id <= 9)) ) { return foregroundColor2; }
     return foregroundColor1;
   }
   
