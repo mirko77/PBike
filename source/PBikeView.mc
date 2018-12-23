@@ -13,7 +13,7 @@ const LENGTH_GPS_ICON = 28;
 const LENGTH_BATTERY_ICON = 50;
 
 
-class PHikeView extends WatchUi.DataField
+class PBikeView extends WatchUi.DataField
 {
   // Array of the current heart rate zone threshold values in beats per minute (bpm)
   private var hrZones;
